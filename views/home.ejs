@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="back"></div>
+    
+    <div id="content">
+        <h1> Hospital Api </h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Path</th>
+                    <th>Required fields</th>
+                    <th>Response</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>POST</td>
+                    <td>https://ninja-hospital-api.herokuapp.com/api/doctors/register</td>
+                    <td>name, address, phone,specialty,password,confirm_password</td>
+                    <td>ID of registered Doctor</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>https://ninja-hospital-api.herokuapp.com/api/doctors/login</td>
+                    <td>phone,password</td>
+                    <td>Bearer Auth Token</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>https://ninja-hospital-api.herokuapp.com/api/patients/register</td>
+                    <td>name, address, phone + Auth Token</td>
+                    <td>ID of registered patient</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>https://ninja-hospital-api.herokuapp.com/api/patients/<--patient id -->/create_report</td>
+                    <td>doctor, data, status + Auth Token</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>GET</td>
+                    <td>https://ninja-hospital-api.herokuapp.com/api/patients/<--patient Id-->/all_reports</td>
+                    <td>-</td>
+                    <td>All the reports of mentioned Id</td>
+                </tr>
+                <tr>
+                    <td>GET</td>
+                    <td>https://ninja-hospital-api.herokuapp.com/api/reports/<--status--></td>
+                    <td>-</td>
+                    <td>All Reports with mentioned status</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="footer">
+        © 2021 TheHospitalApi
+        <h5>Proudly built for India </h5>
+        
+    </div>
+
+</body>
+</html>
